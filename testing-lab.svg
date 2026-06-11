@@ -1,0 +1,23 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.lab{fill:#F0F4F8;}.navy{fill:#0F1F3D;}.accent{fill:#FF6B35;}.steel{fill:#5A6A7C;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Lab benches -->
+  <rect y="180" width="600" height="220" fill="#D8DDE5"/>
+  <!-- Bench top -->
+  <rect y="160" width="600" height="25" fill="#8A96A8"/>
+  <!-- Equipment -->
+  <!-- Machine 1 -->
+  <rect x="60" y="80" width="110" height="80" rx="6" class="navy"/>
+  <rect x="70" y="90" width="90" height="25" fill="#FF6B35" opacity="0.7"/>
+  <!-- Monitor -->
+  <rect x="200" y="70" width="95" height="70" rx="4" class="steel"/>
+  <rect x="210" y="78" width="75" height="45" fill="#C8E0F0"/>
+  <!-- Test device -->
+  <rect x="340" y="95" width="130" height="55" rx="5" fill="#4A5A6C"/>
+  <circle cx="400" cy="122" r="14" fill="#FF6B35" opacity="0.8"/>
+  <!-- Beakers / small items -->
+  <rect x="500" y="100" width="35" height="45" fill="#E0E8F0" rx="3"/>
+  <rect x="550" y="110" width="28" height="35" fill="#C8D4E0" rx="3"/>
+  <!-- Safety accent -->
+  <rect x="20" y="200" width="560" height="4" fill="#FF6B35" opacity="0.25"/>
+</svg>

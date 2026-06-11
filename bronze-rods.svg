@@ -1,0 +1,14 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.bronze{fill:#8B4513;}.dark-bronze{fill:#6B3A0F;}.accent{fill:#FF6B35;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Bundled bronze rods -->
+  <g transform="translate(75,70)">
+    <rect x="0" y="0" width="430" height="20" rx="10" class="bronze"/>
+    <rect x="6" y="26" width="430" height="20" rx="10" class="dark-bronze"/>
+    <rect x="12" y="52" width="430" height="20" rx="10" class="bronze"/>
+    <rect x="18" y="78" width="430" height="20" rx="10" class="dark-bronze"/>
+    <rect x="24" y="104" width="430" height="20" rx="10" class="bronze"/>
+    <!-- Accent rod -->
+    <rect x="30" y="130" width="430" height="20" rx="10" fill="#CD853F"/>
+  </g>
+</svg>

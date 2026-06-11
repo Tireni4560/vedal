@@ -1,0 +1,413 @@
+/* Vedal Resources – Responsive Design */
+
+/* Tablet: 481px–768px */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav .nav-menu {
+    gap: var(--space-lg);
+  }
+  
+  nav .cta-button {
+    margin-left: var(--space-md);
+  }
+  
+  /* Sections */
+  section {
+    padding: var(--space-xxl) var(--space-lg);
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-xxl);
+  }
+  
+  /* Hero */
+  .hero {
+    padding: var(--space-xxl) var(--space-lg);
+  }
+  
+  /* Cards */
+  .card {
+    padding: var(--space-md);
+  }
+  
+  .card-image {
+    height: 200px;
+  }
+  
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .stat-card {
+    padding: var(--space-md);
+  }
+  
+  /* Team */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+  
+  .team-photo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 24px;
+  }
+  
+  .btn-lg {
+    padding: 14px 32px;
+  }
+}
+
+/* Mobile: 0–480px */
+@media (max-width: 480px) {
+  /* Navigation */
+  nav {
+    padding: var(--space-md);
+  }
+  
+  nav .container {
+    padding: 0;
+  }
+  
+  nav .nav-menu {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #0F1F3D; /* Dark navy to match main nav */
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-lg);
+    transform: translateX(-100%);
+    transition: transform 300ms ease;
+    z-index: 40;
+    overflow-y: auto;
+  }
+  
+  nav .nav-menu.active {
+    transform: translateX(0);
+  }
+  
+  nav .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: var(--space-md) 0;
+  }
+  
+  nav .hamburger {
+    display: block;
+    color: #FFFFFF;
+  }
+  
+  nav .cta-button {
+    margin-left: 0;
+    margin-top: var(--space-lg);
+    width: 100%;
+  }
+  
+  nav .cta-button .btn {
+    width: 100%;
+  }
+  
+  /* Sections */
+  section {
+    padding: var(--space-xxl) var(--space-md);
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+  
+  .section-header h2 {
+    margin-bottom: var(--space-md);
+  }
+  
+  /* Hero */
+  .hero {
+    padding: var(--space-xxl) var(--space-md);
+    text-align: center;
+  }
+  
+  .hero h1 {
+    margin-bottom: var(--space-md);
+  }
+  
+  .hero p {
+    margin-bottom: var(--space-lg);
+  }
+  
+  /* Cards */
+  .card {
+    padding: var(--space-md);
+  }
+  
+  .card-image {
+    height: 180px;
+  }
+  
+  .card-list li {
+    padding-left: var(--space-md);
+  }
+  
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .stat-card {
+    padding: var(--space-md);
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  /* Team */
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .team-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: var(--size-small);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .btn-primary,
+  .btn-accent,
+  .btn-outline,
+  .btn-white {
+    display: block;
+    width: 100%;
+  }
+  
+  .btn + .btn {
+    margin-top: var(--space-md);
+  }
+  
+  /* Forms */
+  .form-group {
+    margin-bottom: var(--space-md);
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px;
+  }
+  
+  /* Grid Classes */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Flex Utilities */
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+  
+  /* Hide Elements */
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  /* Footer */
+  footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  footer .footer-column + .footer-column {
+    margin-top: var(--space-xl);
+  }
+  
+  /* Accordion */
+  .faq-question {
+    padding: var(--space-md) 0;
+  }
+  
+  .faq-answer {
+    padding: 0 !important;
+  }
+  
+  .faq-item.active .faq-answer {
+    padding: var(--space-md) 0 !important;
+  }
+}
+
+/* Large Desktop: 1025px+ */
+@media (min-width: 1025px) {
+  /* Two column layouts */
+  .section-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xxxl);
+    align-items: center;
+  }
+  
+  .section-two-col.reverse {
+    direction: rtl;
+  }
+  
+  .section-two-col > * {
+    direction: ltr;
+  }
+  
+  /* Hero with image */
+  .hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xxxl);
+    align-items: center;
+  }
+  
+  .hero-content {
+    text-align: left;
+  }
+  
+  .hero-image {
+    width: 100%;
+  }
+}
+
+/* Tablet & Mobile: 768px and below */
+@media (max-width: 768px) {
+  .section-two-col,
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .section-two-col.reverse {
+    direction: ltr;
+  }
+  
+  /* Product Filter Tabs */
+  .filter-tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .filter-tabs .tab {
+    margin-bottom: var(--space-md);
+  }
+}
+
+/* Ultra-wide screens: 1441px+ */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  section {
+    padding: var(--space-xxxl) 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    page-break-inside: avoid;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets on mobile */
+  .btn {
+    min-height: 44px;
+    padding: 14px 24px;
+  }
+  
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .card:hover {
+    transform: none;
+  }
+  
+  button:hover,
+  a:hover {
+    transform: none;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }
+  
+  .card {
+    background-color: #2a2a2a;
+    border-color: #404040;
+  }
+  
+  nav {
+    background-color: #1a1a1a;
+  }
+}

@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .navy { fill: #0F1F3D; }
+      .steel { fill: #5A6A7C; }
+      .light { fill: #EEEFF2; }
+      .offwhite { fill: #F8F9FA; }
+      .accent { fill: #FF6B35; }
+      .accent-light { fill: #FF8C5A; }
+      .dark-steel { fill: #3A4A5C; }
+    </style>
+  </defs>
+  
+  <!-- Sky / atmosphere -->
+  <rect width="1200" height="280" fill="#E8ECEF"/>
+  
+  <!-- Ground / yard -->
+  <rect y="280" width="1200" height="320" fill="#C8CDD4"/>
+  
+  <!-- Main warehouse building -->
+  <rect x="150" y="140" width="620" height="280" fill="#B8C0C8"/>
+  <!-- Roof -->
+  <polygon points="140,140 470,60 800,140" fill="#5A6A7C"/>
+  <!-- Roof edge -->
+  <polygon points="140,140 470,60 800,140 790,150 470,75 150,150" fill="#3A4A5C"/>
+  
+  <!-- Large loading doors -->
+  <rect x="200" y="280" width="120" height="140" fill="#3A4A5C"/>
+  <rect x="340" y="280" width="120" height="140" fill="#3A4A5C"/>
+  <rect x="480" y="280" width="120" height="140" fill="#3A4A5C"/>
+  
+  <!-- Door highlights -->
+  <rect x="210" y="290" width="100" height="10" fill="#FF6B35" opacity="0.3"/>
+  <rect x="350" y="290" width="100" height="10" fill="#FF6B35" opacity="0.3"/>
+  <rect x="490" y="290" width="100" height="10" fill="#FF6B35" opacity="0.3"/>
+  
+  <!-- Windows / skylights on building -->
+  <rect x="620" y="180" width="60" height="40" fill="#E8F4F8" opacity="0.7"/>
+  <rect x="700" y="180" width="60" height="40" fill="#E8F4F8" opacity="0.7"/>
+  
+  <!-- Organized metal stacks - left yard -->
+  <!-- Stack 1: bars -->
+  <g transform="translate(820, 320)">
+    <rect width="55" height="18" rx="2" class="dark-steel"/>
+    <rect y="22" width="55" height="18" rx="2" class="steel"/>
+    <rect y="44" width="55" height="18" rx="2" class="dark-steel"/>
+    <rect y="66" width="55" height="18" rx="2" class="steel"/>
+    <!-- Accent stripe -->
+    <rect y="88" width="55" height="18" rx="2" class="accent"/>
+  </g>
+  
+  <!-- Stack 2 -->
+  <g transform="translate(890, 340)">
+    <rect width="48" height="16" rx="2" class="steel"/>
+    <rect y="20" width="48" height="16" rx="2" class="dark-steel"/>
+    <rect y="40" width="48" height="16" rx="2" class="steel"/>
+    <rect y="60" width="48" height="16" rx="2" class="dark-steel"/>
+  </g>
+  
+  <!-- Stack 3 - coils suggestion -->
+  <g transform="translate(960, 310)">
+    <!-- Coil 1 -->
+    <ellipse cx="28" cy="28" rx="28" ry="18" fill="#4A5A6C"/>
+    <ellipse cx="28" cy="28" rx="18" ry="10" fill="#6A7A8C"/>
+    <!-- Coil 2 -->
+    <ellipse cx="32" cy="55" rx="26" ry="16" fill="#3A4A5C"/>
+    <ellipse cx="32" cy="55" rx="16" ry="9" fill="#5A6A7C"/>
+  </g>
+  
+  <!-- Forklift / equipment hint -->
+  <g transform="translate(50, 380)">
+    <rect x="20" y="10" width="70" height="35" rx="4" fill="#3A4A5C"/>
+    <rect x="0" y="40" width="95" height="8" rx="2" fill="#5A6A7C"/>
+    <!-- Mast -->
+    <rect x="80" y="0" width="8" height="55" fill="#0F1F3D"/>
+    <!-- Accent -->
+    <rect x="30" y="15" width="50" height="6" fill="#FF6B35"/>
+  </g>
+  
+  <!-- Lighting accents on roof -->
+  <circle cx="280" cy="95" r="6" class="accent" opacity="0.85"/>
+  <circle cx="470" cy="75" r="6" class="accent" opacity="0.85"/>
+  <circle cx="650" cy="95" r="6" class="accent" opacity="0.85"/>
+  
+  <!-- Subtle ground lines for organization -->
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#A0A8B0" stroke-width="2" opacity="0.5"/>
+  <line x1="0" y1="480" x2="1200" y2="480" stroke="#A0A8B0" stroke-width="2" opacity="0.5"/>
+</svg>

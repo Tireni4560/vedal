@@ -1,0 +1,37 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .dark { fill:#3A4A5C; }
+      .steel { fill:#5A6A7C; }
+      .accent { fill:#FF6B35; }
+      .bg { fill:#F8F9FA; }
+    </style>
+  </defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Coils -->
+  <g transform="translate(70,80)">
+    <!-- Coil 1 -->
+    <ellipse cx="95" cy="95" rx="95" ry="65" class="dark"/>
+    <ellipse cx="95" cy="95" rx="58" ry="38" class="steel"/>
+    <ellipse cx="95" cy="95" rx="28" ry="18" fill="#7A8A9C"/>
+    <!-- Inner highlight -->
+    <ellipse cx="78" cy="78" rx="18" ry="10" fill="white" opacity="0.25"/>
+  </g>
+  
+  <g transform="translate(220,110)">
+    <!-- Coil 2 -->
+    <ellipse cx="88" cy="88" rx="88" ry="58" class="steel"/>
+    <ellipse cx="88" cy="88" rx="52" ry="32" class="dark"/>
+    <ellipse cx="88" cy="88" rx="24" ry="14" fill="#6A7A8C"/>
+  </g>
+  
+  <g transform="translate(360,70)">
+    <!-- Coil 3 - accent -->
+    <ellipse cx="92" cy="92" rx="92" ry="62" class="dark"/>
+    <ellipse cx="92" cy="92" rx="55" ry="35" fill="#FF6B35" opacity="0.85"/>
+    <ellipse cx="92" cy="92" rx="26" ry="16" fill="#FF8C5A"/>
+  </g>
+  
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="310" rx="230" ry="32" fill="#00000012"/>
+</svg>

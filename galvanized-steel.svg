@@ -1,0 +1,16 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.silver{fill:#D4D9E2;}.shine{fill:#F0F4F8;}.navy{fill:#0F1F3D;}.accent{fill:#FF6B35;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Shiny galvanized sheets fanned -->
+  <g transform="translate(70,50)">
+    <rect x="30" y="40" width="360" height="200" rx="6" class="silver" transform="rotate(-8 210 140)"/>
+    <rect x="15" y="25" width="360" height="200" rx="6" fill="#E8ECF2" transform="rotate(-4 195 125)"/>
+    <rect x="0" y="10" width="360" height="200" rx="6" class="shine"/>
+    <!-- Metallic shine bands -->
+    <rect x="40" y="30" width="80" height="160" fill="white" opacity="0.4" rx="3"/>
+    <rect x="180" y="45" width="60" height="130" fill="#C8D0DA" opacity="0.35" rx="3"/>
+    <!-- Edge accent -->
+    <rect x="0" y="100" width="360" height="6" fill="#FF6B35" opacity="0.2"/>
+  </g>
+  <ellipse cx="295" cy="330" rx="185" ry="26" fill="#0000000F"/>
+</svg>

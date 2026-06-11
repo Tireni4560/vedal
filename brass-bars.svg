@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.brass{fill:#B8860B;}.dark-brass{fill:#8B6914;}.light{fill:#D4A017;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Bundled brass bars (golden) -->
+  <g transform="translate(85,75)">
+    <rect x="0" y="0" width="410" height="24" rx="12" class="brass"/>
+    <rect x="8" y="32" width="410" height="24" rx="12" class="dark-brass"/>
+    <rect x="16" y="64" width="410" height="24" rx="12" class="light"/>
+    <rect x="24" y="96" width="410" height="24" rx="12" class="brass"/>
+    <rect x="32" y="128" width="410" height="24" rx="12" class="dark-brass"/>
+    <!-- Highlight -->
+    <rect x="40" y="160" width="410" height="24" rx="12" fill="#DAA520"/>
+  </g>
+  <ellipse cx="295" cy="335" rx="195" ry="25" fill="#00000010"/>
+</svg>

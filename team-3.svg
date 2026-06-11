@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.skin{fill:#C89B7A;}.hair{fill:#1F1F1F;}.shirt{fill:#0F1F3D;}.bg{fill:#E8ECEF;}</style></defs>
+  <circle cx="100" cy="100" r="98" class="bg"/>
+  <circle cx="100" cy="90" r="47" class="skin"/>
+  <!-- Short hair -->
+  <path d="M58 75 Q100 42 142 75 Q142 60 100 55 Q58 60 58 75" class="hair"/>
+  <!-- Eyes + brows -->
+  <rect x="70" y="80" width="16" height="2.5" rx="1" fill="#111"/>
+  <rect x="114" y="80" width="16" height="2.5" rx="1" fill="#111"/>
+  <circle cx="78" cy="93" r="4" fill="#111"/>
+  <circle cx="122" cy="93" r="4" fill="#111"/>
+  <!-- Serious professional smile -->
+  <path d="M82 106 Q100 113 118 106" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="46" y="128" width="108" height="72" rx="8" class="shirt"/>
+  <rect x="82" y="128" width="36" height="14" fill="#FF6B35" opacity="0.5"/>
+</svg>

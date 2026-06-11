@@ -1,0 +1,32 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .dark { fill:#3A4A5C; }
+      .steel { fill:#5A6A7C; }
+      .light { fill:#E0E5EC; }
+      .accent { fill:#FF6B35; }
+      .bg { fill:#F8F9FA; }
+    </style>
+  </defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Ground shadow -->
+  <ellipse cx="300" cy="340" rx="220" ry="35" fill="#00000012"/>
+  <g transform="translate(80,70)">
+    <!-- Multiple steel bars stacked -->
+    <rect x="0" y="0" width="420" height="26" rx="13" class="dark"/>
+    <rect x="0" y="0" width="420" height="12" rx="6" fill="#6A7A8C"/>
+    
+    <rect x="12" y="38" width="420" height="26" rx="13" class="steel"/>
+    <rect x="12" y="38" width="420" height="12" rx="6" fill="#7A8A9C"/>
+    
+    <rect x="24" y="76" width="420" height="26" rx="13" class="dark"/>
+    <rect x="24" y="76" width="420" height="12" rx="6" fill="#6A7A8C"/>
+    
+    <rect x="36" y="114" width="420" height="26" rx="13" class="steel"/>
+    <rect x="36" y="114" width="420" height="12" rx="6" fill="#7A8A9C"/>
+    
+    <!-- Highlight accent bar -->
+    <rect x="48" y="152" width="420" height="26" rx="13" class="accent"/>
+    <rect x="48" y="152" width="420" height="12" rx="6" fill="#FF8C5A"/>
+  </g>
+</svg>

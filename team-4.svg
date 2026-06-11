@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.skin{fill:#E2C4A8;}.hair{fill:#3C2F2F;}.shirt{fill:#5A6A7C;}.bg{fill:#E8ECEF;}</style></defs>
+  <circle cx="100" cy="100" r="98" class="bg"/>
+  <circle cx="100" cy="91" r="45" class="skin"/>
+  <!-- Hair with slight wave -->
+  <path d="M60 76 Q75 50 100 54 Q125 50 140 76 Q140 92 100 95 Q60 92 60 76" class="hair"/>
+  <circle cx="77" cy="93" r="4.2" fill="#222"/>
+  <circle cx="123" cy="93" r="4.2" fill="#222"/>
+  <path d="M81 105 Q100 114 119 105" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="47" y="128" width="106" height="72" rx="8" class="shirt"/>
+  <rect x="82" y="128" width="36" height="15" fill="#FF6B35" opacity="0.55"/>
+</svg>

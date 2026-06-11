@@ -1,0 +1,18 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.silver{fill:#C8D2DC;}.light{fill:#E8ECF2;}.navy{fill:#0F1F3D;}.accent{fill:#FF6B35;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Stacked aluminum ingots -->
+  <g transform="translate(100,80)">
+    <rect x="0" y="0" width="140" height="90" rx="6" class="light"/>
+    <rect x="10" y="100" width="140" height="90" rx="6" class="silver"/>
+    <rect x="20" y="200" width="140" height="90" rx="6" class="light"/>
+    <!-- Second stack -->
+    <rect x="170" y="30" width="140" height="90" rx="6" class="silver"/>
+    <rect x="180" y="130" width="140" height="90" rx="6" class="light"/>
+    <rect x="190" y="230" width="140" height="90" rx="6" class="silver"/>
+    <!-- Accent ingot -->
+    <rect x="340" y="60" width="140" height="90" rx="6" fill="#A8B8C8"/>
+    <rect x="350" y="160" width="140" height="90" rx="6" class="silver"/>
+  </g>
+  <ellipse cx="300" cy="355" rx="210" ry="22" fill="#0000000D"/>
+</svg>

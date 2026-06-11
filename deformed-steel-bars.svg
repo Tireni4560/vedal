@@ -1,0 +1,26 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.dark{fill:#3A4A5C;}.steel{fill:#5A6A7C;}.accent{fill:#FF6B35;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <g transform="translate(70,90)">
+    <!-- Ribbed / deformed bars -->
+    <rect x="0" y="0" width="430" height="22" rx="11" class="dark"/>
+    <!-- Rib texture -->
+    <line x1="15" y1="5" x2="15" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="45" y1="5" x2="45" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="75" y1="5" x2="75" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="105" y1="5" x2="105" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="135" y1="5" x2="135" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="165" y1="5" x2="165" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="195" y1="5" x2="195" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    <line x1="225" y1="5" x2="225" y2="17" stroke="#2A3A4C" stroke-width="4"/>
+    
+    <rect x="15" y="38" width="430" height="22" rx="11" class="steel"/>
+    <line x1="30" y1="43" x2="30" y2="55" stroke="#4A5A6C" stroke-width="4"/>
+    <line x1="60" y1="43" x2="60" y2="55" stroke="#4A5A6C" stroke-width="4"/>
+    <line x1="90" y1="43" x2="90" y2="55" stroke="#4A5A6C" stroke-width="4"/>
+    <line x1="120" y1="43" x2="120" y2="55" stroke="#4A5A6C" stroke-width="4"/>
+    
+    <rect x="30" y="76" width="430" height="22" rx="11" class="dark"/>
+    <rect x="45" y="114" width="430" height="22" rx="11" class="accent"/>
+  </g>
+</svg>

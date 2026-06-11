@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.skin{fill:#E8C8AA;}.hair{fill:#3A2C2C;}.shirt{fill:#3A4A5C;}.bg{fill:#E8ECEF;}</style></defs>
+  <circle cx="100" cy="100" r="98" class="bg"/>
+  <circle cx="100" cy="91" r="45" class="skin"/>
+  <!-- Neat professional bob -->
+  <path d="M62 78 Q100 48 138 78 Q138 95 100 98 Q62 95 62 78" class="hair"/>
+  <circle cx="78" cy="93" r="4" fill="#222"/>
+  <circle cx="122" cy="93" r="4" fill="#222"/>
+  <path d="M82 106 Q100 114 118 106" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="48" y="128" width="104" height="72" rx="8" class="shirt"/>
+  <rect x="82" y="128" width="36" height="15" fill="#FF6B35" opacity="0.55"/>
+</svg>

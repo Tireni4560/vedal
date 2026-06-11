@@ -1,0 +1,30 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .silver { fill:#D8DDE5; }
+      .dark { fill:#4A5A6C; }
+      .navy { fill:#0F1F3D; }
+      .accent { fill:#FF6B35; }
+      .bg { fill:#F8F9FA; }
+    </style>
+  </defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Fanned overlapping sheets -->
+  <g transform="translate(90,60)">
+    <!-- Sheet 1 back -->
+    <rect x="20" y="30" width="380" height="220" rx="8" fill="#B8C0C8" transform="rotate(-6 200 140)"/>
+    <!-- Sheet 2 -->
+    <rect x="10" y="20" width="380" height="220" rx="8" class="silver" transform="rotate(-3 195 130)"/>
+    <!-- Main front sheet -->
+    <rect x="0" y="10" width="380" height="220" rx="8" fill="#E8ECF2"/>
+    <!-- Reflections / highlights -->
+    <rect x="30" y="30" width="120" height="180" rx="4" fill="white" opacity="0.55"/>
+    <rect x="160" y="50" width="80" height="140" rx="4" fill="#C8D0D8" opacity="0.4"/>
+    <!-- Edge lines for metallic look -->
+    <line x1="0" y1="10" x2="380" y2="10" stroke="#5A6A7C" stroke-width="3"/>
+    <line x1="0" y1="230" x2="380" y2="230" stroke="#5A6A7C" stroke-width="3"/>
+    <!-- Accent edge -->
+    <rect x="0" y="105" width="380" height="8" fill="#FF6B35" opacity="0.15"/>
+  </g>
+  <ellipse cx="300" cy="340" rx="180" ry="28" fill="#00000010"/>
+</svg>

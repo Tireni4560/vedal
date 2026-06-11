@@ -1,0 +1,15 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.copper{fill:#B87333;}.dark-copper{fill:#8B5A2B;}.accent{fill:#FF6B35;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Copper sheets fanned -->
+  <g transform="translate(80,55)">
+    <rect x="25" y="35" width="360" height="210" rx="8" fill="#8B5A2B" transform="rotate(-7 200 140)"/>
+    <rect x="12" y="22" width="360" height="210" rx="8" class="copper" transform="rotate(-3 195 125)"/>
+    <rect x="0" y="10" width="360" height="210" rx="8" fill="#CD7F32"/>
+    <!-- Highlights -->
+    <rect x="35" y="25" width="95" height="175" fill="#E8B070" opacity="0.35" rx="4"/>
+    <rect x="180" y="40" width="70" height="150" fill="white" opacity="0.2" rx="3"/>
+    <!-- Edge -->
+    <rect x="0" y="105" width="360" height="7" fill="#FF6B35" opacity="0.25"/>
+  </g>
+</svg>

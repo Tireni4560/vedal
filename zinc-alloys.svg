@@ -1,0 +1,17 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.zinc{fill:#A8B4C0;}.light-zinc{fill:#C8D4DC;}.dark{fill:#5A6A7C;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Mixed zinc alloy pieces / ingots -->
+  <g transform="translate(90,70)">
+    <rect x="0" y="0" width="95" height="65" rx="5" class="zinc"/>
+    <rect x="110" y="15" width="85" height="55" rx="5" class="light-zinc"/>
+    <rect x="210" y="5" width="100" height="70" rx="5" class="dark"/>
+    
+    <rect x="20" y="80" width="90" height="60" rx="5" class="light-zinc"/>
+    <rect x="125" y="85" width="95" height="58" rx="5" class="zinc"/>
+    <rect x="235" y="90" width="80" height="52" rx="5" class="dark"/>
+    
+    <!-- Accent piece -->
+    <rect x="50" y="160" width="200" height="55" rx="6" fill="#FF6B35" opacity="0.75"/>
+  </g>
+</svg>

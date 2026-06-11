@@ -1,0 +1,25 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs><style>.silver{fill:#C8D2DC;}.dark-silver{fill:#8A96A8;}.bg{fill:#F8F9FA;}</style></defs>
+  <rect width="600" height="400" class="bg"/>
+  <!-- Aluminum channel profiles -->
+  <g transform="translate(60,60)">
+    <!-- C channel 1 -->
+    <rect x="0" y="0" width="16" height="240" class="silver"/>
+    <rect x="0" y="0" width="95" height="16" class="dark-silver"/>
+    <rect x="0" y="224" width="95" height="16" class="dark-silver"/>
+    
+    <!-- C channel 2 -->
+    <rect x="130" y="20" width="16" height="200" class="dark-silver"/>
+    <rect x="130" y="20" width="95" height="16" class="silver"/>
+    <rect x="130" y="204" width="95" height="16" class="silver"/>
+    
+    <!-- More channels -->
+    <rect x="260" y="10" width="16" height="220" class="silver"/>
+    <rect x="260" y="10" width="95" height="16" class="dark-silver"/>
+    <rect x="260" y="214" width="95" height="16" class="dark-silver"/>
+    
+    <rect x="390" y="30" width="16" height="180" class="dark-silver"/>
+    <rect x="390" y="30" width="95" height="16" class="silver"/>
+    <rect x="390" y="194" width="95" height="16" class="silver"/>
+  </g>
+</svg>
