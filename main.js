@@ -20,8 +20,15 @@ function initializeNavigation() {
   // Hamburger menu toggle
   if (hamburger) {
     hamburger.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
+      const isOpen = navMenu.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.textContent = isOpen ? '✕' : '☰';
+      // Dynamically position the mobile menu directly under the navbar (handles varying nav height)
+      if (isOpen && nav && navMenu) {
+        const navHeight = nav.getBoundingClientRect().height;
+        navMenu.style.top = navHeight + 'px';
+        navMenu.style.height = 'calc(100vh - ' + navHeight + 'px)';
+      }
     });
   }
   
@@ -29,7 +36,14 @@ function initializeNavigation() {
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       navMenu.classList.remove('active');
-      if (hamburger) hamburger.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('active');
+        hamburger.textContent = '☰';
+      }
+      if (navMenu) {
+        navMenu.style.top = '';
+        navMenu.style.height = '';
+      }
     });
   });
   
@@ -48,6 +62,21 @@ function initializeNavigation() {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
+    }
+  });
+
+  // Close mobile menu on resize to desktop (prevents stuck open state)
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('active');
+        hamburger.textContent = '☰';
+      }
+      if (navMenu) {
+        navMenu.style.top = '';
+        navMenu.style.height = '';
+      }
     }
   });
 }
@@ -345,7 +374,14 @@ document.addEventListener('click', function(event) {
   
   if (nav && !nav.contains(event.target) && navMenu && navMenu.classList.contains('active')) {
     navMenu.classList.remove('active');
-    if (hamburger) hamburger.classList.remove('active');
+    if (hamburger) {
+      hamburger.classList.remove('active');
+      hamburger.textContent = '☰';
+    }
+    if (navMenu) {
+      navMenu.style.top = '';
+      navMenu.style.height = '';
+    }
   }
 });
 

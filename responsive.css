@@ -2,18 +2,68 @@
 
 /* Tablet: 481px–768px */
 @media (max-width: 768px) {
-  /* Navigation */
-  nav .nav-menu {
-    gap: var(--space-lg);
+  /* Navigation - Hamburger / mobile menu starts at tablet sizes */
+  nav {
+    padding: var(--space-md);
   }
   
+  nav .container {
+    padding: 0;
+  }
+  
+  nav .nav-menu {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #0F1F3D;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-lg);
+    transform: translateX(-100%);
+    transition: transform 300ms ease;
+    z-index: 40;
+    overflow-y: auto;
+  }
+  
+  nav .nav-menu.active {
+    transform: translateX(0);
+  }
+  
+  nav .nav-menu li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: var(--space-md) 0;
+  }
+
+  nav .nav-menu a {
+    color: #FFFFFF;
+  }
+  
+  nav .hamburger {
+    display: block;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 8px;
+  }
+
+  nav .hamburger.active {
+    color: var(--color-accent);
+  }
+
+  /* Group CTA + hamburger on the right when menu is out of flow */
   nav .cta-button {
-    margin-left: var(--space-md);
+    margin-left: auto;
+    margin-top: 0;
+    width: auto;
   }
 
   nav .cta-button .btn {
     padding: 10px 20px;
     font-size: 0.85rem;
+    white-space: nowrap;
   }
   
   /* Sections */
@@ -76,65 +126,14 @@
 
 /* Mobile: 0–480px */
 @media (max-width: 480px) {
-  /* Navigation */
-  nav {
-    padding: var(--space-md);
-  }
-  
-  nav .container {
-    padding: 0;
-  }
-  
-  nav .nav-menu {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    width: 100%;
-    height: calc(100vh - 60px);
-    background-color: #0F1F3D;
-    flex-direction: column;
-    gap: 0;
-    padding: var(--space-lg);
-    transform: translateX(-100%);
-    transition: transform 300ms ease;
-    z-index: 40;
-    overflow-y: auto;
-  }
-  
-  nav .nav-menu.active {
-    transform: translateX(0);
-  }
-  
-  nav .nav-menu li {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding: var(--space-md) 0;
-  }
-
-  nav .nav-menu a {
-    color: #FFFFFF;
-  }
-  
-  nav .hamburger {
-    display: block;
-    color: #FFFFFF;
-  }
-
+  /* Navigation phone-specific refinements (base mobile nav from 768px query) */
   nav .logo img {
     height: 22px;
   }
   
-  nav .cta-button {
-    margin-left: 0;
-    margin-top: var(--space-sm);
-    width: auto;
-  }
-  
   nav .cta-button .btn {
-    width: auto;
     padding: 8px 16px;
     font-size: 0.75rem;
-    white-space: nowrap;
   }
   
   /* Sections */
