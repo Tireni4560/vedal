@@ -1,14 +1,9 @@
 <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      .navy { fill: #0F1F3D; }
-      .accent { fill: #FF6B35; }
+      .navy { fill: #FFFFFF; }
     </style>
   </defs>
   <!-- Professional wordmark -->
-  <text x="8" y="34" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" class="navy">Vedal Resources</text>
-  <!-- Accent dot -->
-  <circle cx="188" cy="25" r="4" class="accent"/>
-  <!-- Subtle underline accent -->
-  <rect x="8" y="38" width="120" height="2" rx="1" class="accent" opacity="0.6"/>
+  <text x="8" y="34" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5" class="navy">Leye Resources LTD</text>
 </svg>

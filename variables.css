@@ -1,19 +1,19 @@
-/* Vedal Resources – CSS Design System Variables */
+/* Leye Resources LTD – CSS Design System Variables */
 
 :root {
-  /* Color Palette */
-  --color-primary: #003D7A;
-  --color-primary-dark: #002550;
-  --color-primary-light: #0052A3;
+  /* Color Palette - Industrial B2B Metals Theme (Deep Navy for trust/strength, Warm Orange for energy/action) */
+  --color-primary: #0F1F3D;
+  --color-primary-dark: #071122;
+  --color-primary-light: #1A3A5C;
   --color-accent: #FF6B35;
   --color-accent-light: #FF8C5A;
   
-  /* Text Colors - Strong contrast for readability on white/light backgrounds (WCAG AA compliant) */
-  --color-text: #1A1A1A;
-  --color-text-light: #2C3E50; /* Darker steel gray for secondary text — much better readability */
-  --color-text-lighter: #3D4F5F; /* Darker for small meta text, captions, etc. */
+  /* Text Colors - Deep navy for all text on light backgrounds (maximum contrast, fits industrial theme) */
+  --color-text: #0F1F3D;
+  --color-text-light: #0F1F3D;
+  --color-text-lighter: #1A2A4A;
   --color-bg: #FFFFFF;
-  --color-bg-light: #F5F5F5;
+  --color-bg-light: #F0F4F8; /* Light blue-grey tint for subtle section backgrounds - industrial, not plain white or dark grey */
   --color-border: #DDDDDD;
   
   --color-success: #27AE60;

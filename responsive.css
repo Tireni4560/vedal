@@ -1,4 +1,4 @@
-/* Vedal Resources – Responsive Design */
+/* Leye Resources LTD – Responsive Design */
 
 /* Tablet: 481px–768px */
 @media (max-width: 768px) {
@@ -9,6 +9,11 @@
   
   nav .cta-button {
     margin-left: var(--space-md);
+  }
+
+  nav .cta-button .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
   
   /* Sections */
@@ -25,6 +30,10 @@
     padding: var(--space-xxl) var(--space-lg);
   }
   
+  .hero h1 {
+    font-size: 2rem;
+  }
+
   /* Cards */
   .card {
     padding: var(--space-md);
@@ -82,7 +91,7 @@
     top: 60px;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: #0F1F3D; /* Dark navy to match main nav */
+    background-color: #0F1F3D;
     flex-direction: column;
     gap: 0;
     padding: var(--space-lg);
@@ -101,20 +110,31 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding: var(--space-md) 0;
   }
+
+  nav .nav-menu a {
+    color: #FFFFFF;
+  }
   
   nav .hamburger {
     display: block;
     color: #FFFFFF;
   }
+
+  nav .logo img {
+    height: 22px;
+  }
   
   nav .cta-button {
     margin-left: 0;
-    margin-top: var(--space-lg);
-    width: 100%;
+    margin-top: var(--space-sm);
+    width: auto;
   }
   
   nav .cta-button .btn {
-    width: 100%;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    white-space: nowrap;
   }
   
   /* Sections */
@@ -138,10 +158,29 @@
   
   .hero h1 {
     margin-bottom: var(--space-md);
+    font-size: 1.5rem;
   }
   
   .hero p {
     margin-bottom: var(--space-lg);
+    font-size: 0.85rem;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+  p, .card-text { font-size: 0.9rem; }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    text-align: center;
   }
   
   /* Cards */
@@ -180,6 +219,26 @@
   .team-photo {
     width: 100px;
     height: 100px;
+  }
+
+  /* Two-column sections (infrastructure facilities, about story, etc.) */
+  .section-two-col img,
+  .grid-2 img {
+    height: auto !important;
+    max-height: 280px !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .section-two-col,
+  .grid-2 {
+    gap: var(--space-lg);
+  }
+
+  /* General image scaling for stacked layouts */
+  img {
+    max-width: 100%;
+    height: auto;
   }
   
   /* Buttons */
@@ -256,6 +315,12 @@
   .faq-item.active .faq-answer {
     padding: var(--space-md) 0 !important;
   }
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /* Large Desktop: 1025px+ */
@@ -398,16 +463,16 @@
 /* Dark Mode Support (Optional) */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1a1a1a;
-    color: #f5f5f5;
+    background-color: #0A1628; /* Deep dark navy fitting primary theme */
+    color: #E8EDF5; /* Light steel grey for readability */
   }
   
   .card {
-    background-color: #2a2a2a;
-    border-color: #404040;
-  }
+  background-color: #F3F4F6; /* Very light grey */
+  border-color: #E5E7EB; /* Soft light grey border */
+}
   
   nav {
-    background-color: #1a1a1a;
+    background-color: #0F1F3D; /* Brand primary for consistency */
   }
 }

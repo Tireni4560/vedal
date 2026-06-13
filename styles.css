@@ -1,4 +1,4 @@
-/* Vedal Resources – Main Stylesheet */
+/* Leye Resources LTD – Main Stylesheet */
 /* Import all CSS modules in order */
 
 @import url('variables.css');
@@ -11,7 +11,7 @@
 
 /* Footer */
 footer {
-  background-color: #1A1A1A;
+  background-color: #0F1F3D;
   color: white;
   padding: var(--space-xxl) var(--space-lg);
   border-top: 2px solid var(--color-primary);
@@ -31,9 +31,10 @@ footer .container {
 }
 
 .footer-column h3 {
-  color: white;
+  color: #FFFFFF !important;
   margin-bottom: var(--space-lg);
   font-size: var(--size-h4);
+  font-weight: 600;
 }
 
 .footer-column ul {
@@ -46,24 +47,24 @@ footer .container {
 }
 
 .footer-column a {
-  color: #E8ECEF; /* Light gray for excellent visibility on dark (#1A1A1A) footer background — fixes black-on-black nav items */
+  color: #FFFFFF !important; /* Force white for visibility on dark footer - no blue/navy */
   text-decoration: none;
   transition: var(--transition-fast);
   font-weight: 500;
 }
 
 .footer-column a:hover {
-  color: var(--color-accent);
+  color: #FF6B35 !important; /* Orange accent on hover for footer links */
   text-decoration: underline;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Increased opacity for better visibility */
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: var(--space-lg);
   text-align: center;
-  color: rgba(255, 255, 255, 0.85); /* Enhanced from 0.7 to 0.85 for better contrast (7.64:1) */
+  color: #FFFFFF; /* Pure white for maximum visibility */
   font-size: var(--size-small);
-  font-weight: 500; /* Added weight */
+  font-weight: 500;
 }
 
 /* Contact Section Spacing */
@@ -89,9 +90,9 @@ footer .container {
 }
 
 .contact-info p {
-  color: #2C3E50; /* Stronger for readability */
+  color: #0F1F3D;
   margin: 0;
-  font-weight: 500; /* Added weight */
+  font-weight: 500;
 }
 
 .contact-info a {
@@ -153,8 +154,29 @@ footer .container {
   margin-bottom: var(--space-lg);
   padding-left: var(--space-xxl);
   position: relative;
-  color: #0F1F3D; /* Dark navy for excellent visibility on white backgrounds - fitting brand primary */
+  color: #0F1F3D;
   font-weight: 500;
+  transition: transform 0.2s ease, padding-left 0.2s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(4px);
+  padding-left: calc(var(--space-xxl) + 4px);
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-success);
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:hover::before {
+  transform: scale(1.1);
 }
 
 .feature-list li::before {
@@ -172,8 +194,8 @@ footer .container {
   display: inline-flex;
   align-items: center;
   gap: var(--space-sm);
-  color: var(--color-accent);
-  font-weight: 600; /* Already has good weight */
+  color: #0F1F3D;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -182,64 +204,109 @@ footer .container {
   transition: var(--transition-fast);
 }
 
+.link-arrow:hover {
+  color: var(--color-accent);
+}
+
 .link-arrow:hover::after {
   transform: translateX(4px);
 }
 
-/* Process Timeline */
-.timeline {
+/* Modern Vertical Process Timeline - Clean, premium, and professional */
+.process-timeline {
   position: relative;
-  padding: var(--space-xxl) 0;
+  padding-left: 80px;
 }
 
-.timeline::before {
+.process-timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--color-border);
-  transform: translateX(-1px);
+  left: 31px;
+  top: 20px;
+  bottom: 20px;
+  width: 4px;
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-primary));
+  border-radius: 4px;
 }
 
-.timeline-item {
-  margin-bottom: var(--space-xxxl);
+.process-step {
   position: relative;
+  margin-bottom: var(--space-xxl);
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
 }
 
-.timeline-item:nth-child(odd) {
-  text-align: right;
-  padding-right: 51%;
-}
-
-.timeline-item:nth-child(even) {
-  text-align: left;
-  padding-left: 51%;
-}
-
-.timeline-marker {
+.process-marker {
   position: absolute;
-  left: 50%;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  background-color: var(--color-accent);
+  left: -64px;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--color-accent), #E55A24);
   border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.35rem;
+  font-weight: 700;
+  box-shadow: 0 10px 15px -3px rgba(255, 107, 53, 0.35);
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
 }
 
-.timeline-content {
-  background-color: var(--color-bg-light);
+.process-step:hover .process-marker {
+  transform: scale(1.08);
+  box-shadow: 0 15px 20px -4px rgba(255, 107, 53, 0.4);
+}
+
+.process-content {
+  background: white;
   padding: var(--space-lg);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  flex: 1;
+  transition: all 0.3s ease;
 }
 
-.timeline-content h4 {
-  margin-bottom: var(--space-md);
+.process-step:hover .process-content {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.process-content h4 {
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.process-content p {
+  font-size: 0.95rem;
+  color: #0F1F3D;
+  margin: 0;
+  line-height: 1.65;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .process-timeline {
+    padding-left: 52px;
+  }
+  
+  .process-timeline::before {
+    left: 25px;
+  }
+  
+  .process-marker {
+    left: -52px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.1rem;
+  }
 }
 
 /* Map Container */
@@ -343,7 +410,7 @@ footer .container {
 }
 
 .modal-close:hover {
-  color: var(--color-text);
+  color: #0F1F3D;
 }
 
 @keyframes fadeIn {

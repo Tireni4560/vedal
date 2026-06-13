@@ -1,4 +1,4 @@
-/* Vedal Resources – Base Styles */
+/* Leye Resources LTD – Base Styles */
 
 /* Import Variables */
 @import url('variables.css');
@@ -21,7 +21,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--size-body);
   line-height: var(--lh-body);
-  color: var(--color-text);
+  color: #0F1F3D; /* Deep navy for maximum readability on all light backgrounds */
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -54,6 +54,7 @@ h4 {
 
 p {
   margin-bottom: var(--space-md);
+  color: #E5E7EB;
 }
 
 p:last-child {
@@ -73,6 +74,7 @@ a:hover {
 small {
   font-size: var(--size-small);
   color: #0F1F3D;
+  font-weight: 500;
 }
 
 .text-light {
@@ -80,7 +82,7 @@ small {
 }
 
 .text-lighter {
-  color: #3D4F5F;
+  color: #0F1F3D;
 }
 
 strong {
@@ -95,6 +97,7 @@ ul, ol {
 
 li {
   margin-bottom: var(--space-sm);
+  color: #0F1F3D;
 }
 
 /* Images */

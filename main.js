@@ -1,4 +1,4 @@
-/* Vedal Resources – Main JavaScript */
+/* Leye Resources LTD – Main JavaScript */
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
@@ -203,13 +203,25 @@ function submitForm(form) {
 function showFormSuccess(form) {
   const messageDiv = document.createElement('div');
   messageDiv.className = 'form-message success';
-  messageDiv.textContent = '✓ Thank you! We\'ll get back to you within 24 hours.';
+  messageDiv.innerHTML = `
+    <div style="display:flex; align-items:center; gap:12px;">
+      <span style="font-size:1.4rem;">✓</span> 
+      <span>Thank you! We'll get back to you within 24 hours.</span>
+    </div>
+  `;
   form.insertBefore(messageDiv, form.firstChild);
   
-  // Remove message after 5 seconds
+  // Subtle celebration scale
+  messageDiv.style.transform = 'scale(0.95)';
+  messageDiv.style.transition = 'transform 0.3s ease';
   setTimeout(() => {
-    messageDiv.remove();
-  }, 5000);
+    messageDiv.style.transform = 'scale(1)';
+  }, 10);
+  
+  // Remove message after 6 seconds
+  setTimeout(() => {
+    if (messageDiv.parentNode) messageDiv.parentNode.removeChild(messageDiv);
+  }, 6000);
 }
 
 function showFormError(form, message) {
@@ -319,7 +331,7 @@ function setFormField(fieldName, value) {
 function trackPDFDownload() {
   if (typeof gtag !== 'undefined') {
     gtag('event', 'file_download', {
-      'file_name': 'vedal-company-profile.pdf',
+      'file_name': 'leye-company-profile.pdf',
       'file_type': 'pdf'
     });
   }
@@ -347,11 +359,167 @@ document.addEventListener('submit', function(event) {
 });
 
 // Expose utility functions globally
-window.vedal = {
+window.leye = {
   trackPDFDownload: trackPDFDownload,
   getQueryParameter: getQueryParameter,
   setFormField: setFormField
 };
+
+// Surprise: Animated number counters for stats (professional portfolio touch)
+function animateCounters() {
+  const counters = document.querySelectorAll('.stat-number');
+  
+  counters.forEach(counter => {
+    const targetText = counter.textContent.trim();
+    const hasPlus = targetText.includes('+');
+    const hasPercent = targetText.includes('%');
+    const target = parseFloat(targetText.replace(/[^0-9.]/g, ''));
+    
+    if (isNaN(target)) return;
+    
+    counter.textContent = hasPercent ? '0%' : '0' + (hasPlus ? '+' : '');
+    
+    const duration = 1800;
+    const startTime = performance.now();
+    
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(target * eased);
+      
+      let display = current.toLocaleString();
+      if (hasPlus) display += '+';
+      if (hasPercent) display += '%';
+      
+      counter.textContent = display;
+      
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = targetText; // final exact value
+      }
+    }
+    
+    requestAnimationFrame(update);
+  });
+}
+
+// Trigger counters when stats come into view
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      statsObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const statsSection = document.querySelector('.stats-grid');
+  if (statsSection) {
+    statsObserver.observe(statsSection);
+  }
+});
+
+// Add a nice back-to-top button (subtle professional UX delight)
+function addBackToTop() {
+  const btn = document.createElement('button');
+  btn.innerHTML = '↑';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.style.cssText = `
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0F1F3D, #003D7A);
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(15,31,61,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  `;
+  
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  document.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.style.opacity = '1';
+      btn.style.visibility = 'visible';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.visibility = 'hidden';
+    }
+  });
+  
+  document.body.appendChild(btn);
+}
+
+document.addEventListener('DOMContentLoaded', addBackToTop);
+
+// Modern scroll progress bar in nav (subtle premium UX)
+function initScrollProgress() {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  
+  const progress = document.createElement('div');
+  progress.className = 'nav-progress';
+  nav.appendChild(progress);
+  
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progress.style.width = scrollPercent + '%';
+  }, { passive: true });
+}
+
+document.addEventListener('DOMContentLoaded', initScrollProgress);
+
+// Cool feature: Click any email to copy to clipboard (professional touch)
+document.addEventListener('click', function(e) {
+  const emailLink = e.target.closest('a[href^="mailto:"]');
+  if (emailLink) {
+    const email = emailLink.textContent.trim();
+    if (email.includes('@')) {
+      navigator.clipboard.writeText(email).then(() => {
+        const originalText = emailLink.textContent;
+        emailLink.textContent = 'Copied!';
+        setTimeout(() => {
+          if (emailLink) emailLink.textContent = originalText;
+        }, 1500);
+      }).catch(() => {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        const originalText = emailLink.textContent;
+        emailLink.textContent = 'Copied!';
+        setTimeout(() => {
+          if (emailLink) emailLink.textContent = originalText;
+        }, 1500);
+      });
+      e.preventDefault();
+    }
+  }
+});
 
 // Graceful handling for missing placeholder images (pre-launch state)
 // Replaces broken <img> with a clean professional placeholder box so the site never looks "broken"

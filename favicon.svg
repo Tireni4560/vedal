@@ -1,8 +1,12 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <defs><style>.navy{fill:#0F1F3D;}.accent{fill:#FF6B35;}</style></defs>
-  <!-- Simple professional favicon -->
+  <defs>
+    <style>
+      .navy { fill: #0F1F3D; }
+      .white { fill: #FFFFFF; }
+    </style>
+  </defs>
+  <!-- Navy circle background -->
   <circle cx="32" cy="32" r="30" class="navy"/>
-  <rect x="18" y="20" width="28" height="8" rx="2" class="accent"/>
-  <rect x="18" y="32" width="28" height="8" rx="2" fill="#E8ECEF"/>
-  <rect x="18" y="44" width="18" height="8" rx="2" fill="#E8ECEF"/>
+  <!-- "LR" monogram in white, matching logo style -->
+  <text x="10" y="36" font-family="Roboto, Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5" class="white">LR</text>
 </svg>

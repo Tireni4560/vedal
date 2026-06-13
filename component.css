@@ -1,4 +1,4 @@
-/* Vedal Resources – Component Styles */
+/* Leye Resources LTD – Component Styles */
 
 /* Navigation - Dark background with white text for visibility over hero and dark sections */
 nav {
@@ -10,6 +10,18 @@ nav {
   z-index: 50;
   box-shadow: var(--shadow-sm);
   transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* Modern scroll progress bar (portfolio polish) */
+.nav-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-accent), #FF8C5A);
+  width: 0%;
+  transition: width 0.1s ease-out;
+  z-index: 51;
 }
 
 nav.scrolled {
@@ -25,13 +37,20 @@ nav .container {
 }
 
 nav .logo {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #FFFFFF; /* White for dark nav */
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+}
+
+nav .logo img {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+nav .logo:hover img {
+  transform: scale(1.03);
 }
 
 nav .nav-menu {
@@ -42,7 +61,7 @@ nav .nav-menu {
 }
 
 nav .nav-menu a {
-  color: #E8ECEF; /* Light text for dark background */
+  color: #FFFFFF; /* Pure white for maximum visibility on dark navy nav */
   font-weight: 500;
   position: relative;
   padding: var(--space-sm) 0;
@@ -65,11 +84,11 @@ nav .nav-menu a.active::after {
 }
 
 nav .nav-menu a:hover {
-  color: #FFFFFF;
+  color: #FF6B35;
 }
 
 nav .nav-menu a.active {
-  color: var(--color-accent);
+  color: #FF6B35;
 }
 
 nav .cta-button {
@@ -82,45 +101,82 @@ nav .hamburger {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #FFFFFF; /* White for dark nav */
+  color: #FFFFFF;
   padding: var(--space-sm);
 }
 
 /* Buttons */
 .btn {
-  display: inline-block;
-  padding: 12px 32px;
-  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  border-radius: var(--radius-md);
   font-weight: 600;
   text-align: center;
-  transition: var(--transition-fast);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   border: none;
   font-size: var(--size-body);
   text-decoration: none;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::after {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
+  box-shadow: 0 4px 14px rgba(0, 61, 122, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 61, 122, 0.4);
 }
 
 .btn-accent {
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   color: white;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
 }
 
 .btn-accent:hover {
   background: linear-gradient(135deg, #E55A24, var(--color-accent));
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.45);
+}
+
+.btn-white {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid white;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+.btn-white:hover {
+  background-color: #F8F9FA;
+  border-color: #F8F9FA;
+  transform: translateY(-3px);
 }
 
 .btn-outline {
@@ -170,15 +226,35 @@ nav .hamburger {
 .card {
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: var(--space-lg);
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease;
+  position: relative;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-color: var(--color-accent);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--color-accent);
+  transition: height 0.3s ease;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.card:hover::before {
+  height: 100%;
 }
 
 .card-image {
@@ -192,13 +268,15 @@ nav .hamburger {
 .card-title {
   font-size: var(--size-h4);
   margin-bottom: var(--space-md);
-  color: var(--color-primary);
+  color: #0F1F3D !important;
+  font-weight: 700;
 }
 
 .card-text {
   font-size: var(--size-small);
-  color: #0F1F3D;
+  color: #0F1F3D !important;
   margin-bottom: var(--space-md);
+  font-weight: 500;
 }
 
 .card-list {
@@ -212,6 +290,7 @@ nav .hamburger {
   margin-bottom: var(--space-sm);
   font-size: var(--size-small);
   color: #0F1F3D;
+  font-weight: 500;
 }
 
 .card-list li::before {
@@ -231,7 +310,7 @@ nav .hamburger {
   display: block;
   margin-bottom: var(--space-sm);
   font-weight: 500;
-  color: var(--color-text);
+  color: #0F1F3D;
 }
 
 .form-group label .required {
@@ -315,6 +394,21 @@ section {
 
 .section-header h2 {
   margin-bottom: var(--space-lg);
+  position: relative;
+  display: inline-block;
+  color: #0F1F3D !important;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-accent), var(--color-primary));
+  border-radius: 3px;
 }
 
 .section-header p {
@@ -366,8 +460,8 @@ section {
 
 .stat-label {
   font-size: var(--size-small);
-  color: var(--color-text);
-  font-weight: 500;
+  color: #0F1F3D;
+  font-weight: 600;
 }
 
 /* Team Grid */
@@ -410,7 +504,7 @@ section {
   font-size: var(--size-small);
   color: #0F1F3D;
   margin-bottom: var(--space-md);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .team-bio {
@@ -457,6 +551,7 @@ section {
   color: #0F1F3D;
   transition: max-height 300ms ease;
   padding: 0;
+  font-weight: 500;
 }
 
 .faq-item.active .faq-answer {
@@ -511,7 +606,7 @@ section {
 
 .badge-light {
   background-color: var(--color-bg-light);
-  color: var(--color-text); /* Changed from text to ensure contrast on light bg */
+  color: #0F1F3D; /* Changed from text to ensure contrast on light bg */
   font-weight: 600; /* Added weight for badge visibility */
 }
 
@@ -574,4 +669,9 @@ section {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40%, 70% { transform: translateY(6px); }
 }
